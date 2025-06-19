@@ -259,7 +259,7 @@ const WeatherApp = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              <div className="md:col-span-2 ">
+              <div className="md:col-span-1 ">
                 <input
                   type="text"
                   value={location}
@@ -270,6 +270,20 @@ const WeatherApp = () => {
                 />
               </div>
 
+              <div className="grid grid-cols-2 gap-2">
+                <input
+                  type="date"
+                  value={dateRange.start}
+                  onChange={(e) => setDateRange(prev => ({ ...prev, start: e.target.value }))}
+                  className="px-3 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+                <input
+                  type="date"
+                  value={dateRange.end}
+                  onChange={(e) => setDateRange(prev => ({ ...prev, end: e.target.value }))}
+                  className="px-3 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+                />
+              </div>
               
               <div className="flex space-x-2">
                 <button
@@ -472,7 +486,7 @@ const WeatherApp = () => {
                             ...prev, 
                             weatherData: { ...prev.weatherData, condition: e.target.value }
                           }))}
-                          className="px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white"
+                          className="px-3 py-2 rounded-lg bg-black/20 border border-white/20 text-white"
                         >
                           <option value="clear">Clear</option>
                           <option value="clouds">Clouds</option>
