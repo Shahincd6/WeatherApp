@@ -553,7 +553,7 @@ const WeatherApp = () => {
             )}
           </div>
         )}
-\
+
         {activeTab === 'export' && (
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
             <h3 className="text-2xl font-bold mb-6 flex items-center">
