@@ -1,0 +1,17 @@
+# Ignore environment files
+.env
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# SQLite DB (optional - only if you don't want to track it)
+weather_data.db
