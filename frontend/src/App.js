@@ -22,7 +22,7 @@ const WeatherApp = () => {
   const [showInfo, setShowInfo] = useState(false);
   const [youtubeVideos, setYoutubeVideos] = useState([]);
 
-  const API_BASE_URL = 'http://localhost:3001/api';
+  const API_BASE_URL = 'http://localhost:3001/api' || 'https://weatherapp-yzok.onrender.com' ;
 
   useEffect(() => {
     loadWeatherHistory();
@@ -467,7 +467,7 @@ const WeatherApp = () => {
                           type="text"
                           value={editingRecord.location}
                           onChange={(e) => setEditingRecord(prev => ({ ...prev, location: e.target.value }))}
-                          className="px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white"
+                          className="px-3 py-2 rounded-lg bg-black/20 border border-white/20 text-white"
                           placeholder="Location"
                         />
                         <input
@@ -477,7 +477,7 @@ const WeatherApp = () => {
                             ...prev, 
                             weatherData: { ...prev.weatherData, temperature: parseInt(e.target.value) }
                           }))}
-                          className="px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white"
+                          className="px-3 py-2 rounded-lg bg-black  /20 border border-white/20 text-white"
                           placeholder="Temperature"
                         />
                         <select
